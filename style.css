@@ -1,0 +1,16 @@
+.Heading{
+    text-align: left;   
+    width:100%;
+    
+   }
+   .Heading h3{
+    display:inline;
+    text-decoration: wavy;
+    line-height: 3px;
+   }
+   .Heading button{
+       float: right;
+   }
+   .BIGIMG{
+       width: 100%;
+   }
