@@ -28,6 +28,7 @@ function setup(){
 	video.size(600,600);
   poseNet = ml5.poseNet(video,MLODED);
   poseNet.on("pose",gotPose);
+  video.hide();
 }
 function gotPose(error,results){
 	if(error){
