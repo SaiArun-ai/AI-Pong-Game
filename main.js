@@ -23,11 +23,25 @@ var ball = {
 
 function setup(){
   var canvas =  createCanvas(700,600);
+  canvas.parent('canvas');
+  video = createCapture(VIDEO);
+	video.size(600,600);
+  poseNet = ml5.poseNet(video,MLODED);
+  poseNet.on("pose",gotPose);
+}
+function gotPose(error,results){
+	if(error){
+		console.log(error);
+	}else{
+		
+	}
+}
+function MLODED(){
+	console.log("Posenet loaded")
 }
 
-
 function draw(){
-
+  
  background(0); 
 
  fill("black");
@@ -37,7 +51,7 @@ function draw(){
  fill("black");
  stroke("black");
  rect(0,0,20,700);
- 
+ image(video,0,0,700,600);
    //funtion paddleInCanvas call 
    paddleInCanvas();
  
@@ -52,7 +66,7 @@ function draw(){
     //pc computer paddle
     fill("#FFA500");
     stroke("#FFA500");
-   var paddle2y =ball.y-paddle2Height/2;  rect(paddle2Y,paddle2y,paddle2,paddle2Height,100);
+   var paddle2y =ball.y-paddle2Height/2 - 120;  rect(paddle2Y,paddle2y,paddle2,paddle2Height,100);
     
     //function midline call
     midline();
