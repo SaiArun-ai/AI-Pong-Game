@@ -25,10 +25,11 @@ function setup(){
   var canvas =  createCanvas(700,600);
   canvas.parent('canvas');
   video = createCapture(VIDEO);
+  video.hide();
 	video.size(600,600);
   poseNet = ml5.poseNet(video,MLODED);
   poseNet.on("pose",gotPose);
-  video.hide();
+  
 }
 function gotPose(error,results){
 	if(error){
