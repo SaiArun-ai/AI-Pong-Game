@@ -18,16 +18,39 @@
         <center>
             <div class = "Heading  btn btn-primary">
               <h1 class = "text-success">AI Pong Tourney
-              <button id = "Instructions" onclick = PopInsturctions() class = "btn btn-danger">Instructions and movement.</button>
+              <button id = "Instructions" data-toggle = "modal" data-target = "#Modal" class = "btn btn-danger">Instructions and movement.</button>
             </h1></div>
             <br><br>
-            <button id = "StartPlay" onclick = "StartPONG()" class = "btn btn-success" ></button>
+            <button id = "StartPlay" onclick = "StartPONG()" class = "btn btn-success" >Start Game</button>
             <br><br>
             <div id = "Status" class = "btn btn- warning"></div>
             <br><br>
             <div id = "canvas"></div>
             <div id = "GameConsole"></div>
+            <div id = "Modal" class = "modal fade">
+              <div class = "modal-dialog">
+                <div class = "modal-content">
+                  <div class = "modal-heading">
+                    <button id = "Close" data-dismiss = "modal">&times;</button>
+                    <h2>INSTRUCTIONS</h2>
+                  </div>
+                  <div class = "modal-body">
+                    <ol>
+                      <li> First keep your laptop screen straight</li>
+                      <li>Move yourself approximately 3-4 feet away from the laptop</li>
+                      <li>Move your right wrist in an ascending and decending manner, a red dot should appear on your right wrist</li>
+                      <li>Now press the play button, and again move yourself 3-4 feet away from laptop</li>
+                      <li>The red paddel is your paddel, that will move as per the movement of your right wrist</li>
+                    </ol>              
+                  </div>
+                </div>
+              </div>
+            </div>
+            <footer> 
+              <h5 id = "Footer">Creator - Sai Arun Prasaad, Copyright - Sai Arun Prasaad</h5>
+            </footer>
           </center>
+
         <script src="main.js"></script>
     </body>
 </html>
